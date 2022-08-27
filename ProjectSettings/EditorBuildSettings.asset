@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: c162976e99d52403ab5dd5cf49abe974
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/PinchGrabTest.unity
+    guid: 8e57584c5ac464dc28c8450ab83e8e5e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b70b1e74920db4c51b374927bcd3b72a, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 19bb4d4b9468b4a5d81a7fdecd5cfe05, type: 2}

@@ -5,6 +5,9 @@ using UnityEngine;
 public class NV_rotation : MonoBehaviour
 {
     [SerializeField] float rvSpeed = 2.0f;
+
+    public bool Animate { get; set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +17,9 @@ public class NV_rotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.eulerAngles += new Vector3(0, rvSpeed*Time.deltaTime, 0);
+        if (Animate)
+        {
+            transform.eulerAngles += new Vector3(0, rvSpeed * Time.deltaTime, 0);
+        }
     }
 }
