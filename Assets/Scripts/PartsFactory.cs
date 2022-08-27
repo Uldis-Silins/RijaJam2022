@@ -14,10 +14,13 @@ public class PartsFactory : MonoBehaviour
 
     public void Spawn()
     {
-        int partIndex = Random.Range(0, partPrefabs.Length);
-        var instance = Instantiate<Part>(partPrefabs[partIndex], m_spawnPoint.position + m_spawnOffset, Quaternion.identity);
-        instance.SetOwner(this);
-        m_spawnedParts.Add(instance);
+        if (m_spawnedParts.Count == 0)
+        {
+            int partIndex = Random.Range(0, partPrefabs.Length);
+            var instance = Instantiate<Part>(partPrefabs[partIndex], m_spawnPoint.position + m_spawnOffset, Quaternion.identity);
+            instance.SetOwner(this);
+            m_spawnedParts.Add(instance);
+        }
     }
 
     public void Despawn(Part part)
