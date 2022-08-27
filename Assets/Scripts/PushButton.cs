@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PushButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Animator anim;
+    public AudioSource audioSource;
 
-    // Update is called once per frame
-    void Update()
+    public AudioClip[] clickClips;
+
+    private readonly int m_pushAnimHash = Animator.StringToHash("");
+
+    public void Push()
     {
-        
+        anim.SetTrigger(m_pushAnimHash);
+        audioSource.clip = clickClips[Random.Range(0, clickClips.Length)];
+        audioSource.Play();
     }
 }
