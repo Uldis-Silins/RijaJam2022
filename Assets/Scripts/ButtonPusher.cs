@@ -18,7 +18,8 @@ public class ButtonPusher : MonoBehaviour
         {
             for (int i = 0; i < hits.Length; i++)
             {
-                hits[i].GetComponent<PushButton>();
+                hits[i].GetComponent<PushButton>().Push();
+                break;
             }
         }
     }

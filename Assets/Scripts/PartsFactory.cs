@@ -35,6 +35,17 @@ public class PartsFactory : MonoBehaviour
         Destroy(part.gameObject);
     }
 
+    public void Despawn()
+    {
+        if (m_spawnedParts.Count > 0)
+        {
+            var part = m_spawnedParts[0];
+            m_spawnedParts.Remove(part);
+
+            Despawn(part);
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Color prevColor = Gizmos.color;
