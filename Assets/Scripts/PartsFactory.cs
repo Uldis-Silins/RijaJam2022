@@ -39,7 +39,7 @@ public class PartsFactory : MonoBehaviour
     {
         Color prevColor = Gizmos.color;
         Gizmos.color = Color.magenta;
-        Gizmos.DrawWireCube(transform.position, Vector3.one);
+        Gizmos.DrawWireCube(transform.position, Vector3.one * 0.2f);
         Gizmos.color = prevColor;
     }
 }
