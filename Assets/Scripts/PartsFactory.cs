@@ -12,6 +12,11 @@ public class PartsFactory : MonoBehaviour
 
     private List<Part> m_spawnedParts;
 
+    private void Awake()
+    {
+        m_spawnedParts = new List<Part>();
+    }
+
     public void Spawn()
     {
         if (m_spawnedParts.Count == 0)
@@ -28,5 +33,13 @@ public class PartsFactory : MonoBehaviour
         Assert.IsTrue(m_spawnedParts.Contains(part));
         m_spawnedParts.Remove(part);
         Destroy(part.gameObject);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Color prevColor = Gizmos.color;
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(transform.position, Vector3.one);
+        Gizmos.color = prevColor;
     }
 }

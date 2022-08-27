@@ -8,7 +8,7 @@ public class Part : MonoBehaviour
     // TODO: Create part data and assign here
     private Rigidbody m_rigidbody;
 
-    private Vector3 m_prevVelocity;
+    private Vector3 m_prevPosition;
 
     public PartsFactory Owner { get; private set; }
     public bool InGrab { get; private set; }
@@ -27,19 +27,20 @@ public class Part : MonoBehaviour
     {
         if (InGrab)
         {
-            m_prevVelocity = m_rigidbody.velocity;
+            m_prevPosition = transform.position;
         }
     }
 
     public void StartGrab()
     {
         InGrab = true;
-        m_rigidbody.isKinematic = false;
+        m_rigidbody.isKinematic = true;
         m_rigidbody.useGravity = false;
     }
 
     public void EndGrab()
     {
+        m_rigidbody.isKinematic = false;
         m_rigidbody.useGravity = true;
         InGrab = false;
     }

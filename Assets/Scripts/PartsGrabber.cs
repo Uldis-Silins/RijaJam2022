@@ -17,6 +17,11 @@ public class PartsGrabber : MonoBehaviour
     private Vector3 m_grabOffset;
 
     private bool m_spawnNewPart;
+    private Part m_oldGrabbedPart;
+    private float m_despawnTimer;
+
+    private int m_endPinchCounter;
+    private const float END_PINCH_BUFFER_COUNT = 5;
 
     private void Awake()
     {
@@ -27,8 +32,14 @@ public class PartsGrabber : MonoBehaviour
     {
         if(m_spawnNewPart)
         {
-            levelController.factories[0].Spawn();
-            m_spawnNewPart = false;
+            m_despawnTimer += Time.deltaTime;
+
+            if (m_despawnTimer > 3.0f)
+            {
+                m_oldGrabbedPart.Owner.Despawn(m_oldGrabbedPart);
+                levelController.factories[0].Spawn();
+                m_spawnNewPart = false;
+            }
         }
 
         if (m_currentGrabbedPart)
@@ -36,12 +47,22 @@ public class PartsGrabber : MonoBehaviour
             if (hand.GetFingerIsPinching(OVRHand.HandFinger.Index))
             {
                 m_currentGrabbedPart.transform.position = hand.transform.position + m_grabOffset;
+                m_endPinchCounter = 0;
             }
             else
             {
-                m_currentGrabbedPart.EndGrab();
-                m_currentGrabbedPart = null;
-                m_spawnNewPart = true;
+                m_endPinchCounter++;
+
+                if (m_endPinchCounter > END_PINCH_BUFFER_COUNT)
+                {
+                    m_currentGrabbedPart.EndGrab();
+
+                    m_oldGrabbedPart = m_currentGrabbedPart;
+                    m_despawnTimer = 0;
+
+                    m_currentGrabbedPart = null;
+                    m_spawnNewPart = true;
+                }
             }
         }
         else
