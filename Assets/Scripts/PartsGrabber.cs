@@ -21,7 +21,7 @@ public class PartsGrabber : MonoBehaviour
     private float m_despawnTimer;
 
     private int m_endPinchCounter;
-    private const float END_PINCH_BUFFER_COUNT = 5;
+    private const float END_PINCH_BUFFER_COUNT = 15;
 
     private void Awake()
     {
@@ -55,6 +55,7 @@ public class PartsGrabber : MonoBehaviour
 
                 if (m_endPinchCounter > END_PINCH_BUFFER_COUNT)
                 {
+                    m_currentGrabbedPart.transform.parent = null;
                     m_currentGrabbedPart.EndGrab();
 
                     m_oldGrabbedPart = m_currentGrabbedPart;
@@ -89,6 +90,7 @@ public class PartsGrabber : MonoBehaviour
                     {
                         m_currentGrabbedPart = closestPart;
                         m_grabOffset = closestPart.transform.position - hand.transform.position;
+                        m_currentGrabbedPart.transform.parent = hand.transform;
                         closestPart.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
                         closestPart.StartGrab();
 
