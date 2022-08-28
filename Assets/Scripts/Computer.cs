@@ -66,6 +66,9 @@ public class Computer : MonoBehaviour
             }
             else
             {
+                part.Owner.Despawn(part);
+                part.Owner.Spawn();
+
                 if(soundSource)
                 {
                     soundSource.clip = wrongPartClips[Random.Range(0, wrongPartClips.Length)];
