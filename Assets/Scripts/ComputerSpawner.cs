@@ -31,6 +31,7 @@ public class ComputerSpawner : MonoBehaviour
 
                     if(m_moveTimer > moveInTime)
                     {
+                        m_currentComputer.Initialize();
                         m_state = CurrentStateType.Assemble;
                     }
                 }
@@ -54,7 +55,7 @@ public class ComputerSpawner : MonoBehaviour
 
                     if(m_moveTimer > moveOutTime)
                     {
-                        Destroy(m_currentComputer);
+                        Destroy(m_currentComputer.gameObject);
                         m_currentComputer = null;
                         Spawn();
                     }

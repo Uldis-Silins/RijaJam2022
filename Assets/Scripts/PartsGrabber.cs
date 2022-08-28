@@ -16,10 +16,6 @@ public class PartsGrabber : MonoBehaviour
     private Part m_currentGrabbedPart;
     private Vector3 m_grabOffset;
 
-    private bool m_spawnNewPart;
-    private Part m_oldGrabbedPart;
-    private float m_despawnTimer;
-
     private int m_endPinchCounter;
     private const float END_PINCH_BUFFER_COUNT = 15;
 
@@ -30,23 +26,14 @@ public class PartsGrabber : MonoBehaviour
 
     private void Update()
     {
-        if(m_spawnNewPart)
-        {
-            m_despawnTimer += Time.deltaTime;
-
-            if (m_despawnTimer > 3.0f)
-            {
-                m_oldGrabbedPart.Owner.Despawn(m_oldGrabbedPart);
-                levelController.factories[0].Spawn();
-                m_spawnNewPart = false;
-            }
-        }
+        bool inPinch = hand.GetFingerIsPinching(OVRHand.HandFinger.Index) || hand.GetFingerIsPinching(OVRHand.HandFinger.Thumb) ||
+            hand.GetFingerIsPinching(OVRHand.HandFinger.Middle);
 
         if (m_currentGrabbedPart)
         {
-            if (hand.GetFingerIsPinching(OVRHand.HandFinger.Index))
+            if (inPinch)
             {
-                m_currentGrabbedPart.transform.position = hand.transform.position + m_grabOffset;
+                //m_currentGrabbedPart.transform.position = hand.transform.position + m_grabOffset;
                 m_endPinchCounter = 0;
             }
             else
@@ -58,27 +45,23 @@ public class PartsGrabber : MonoBehaviour
                     m_currentGrabbedPart.transform.parent = null;
                     m_currentGrabbedPart.EndGrab();
 
-                    m_oldGrabbedPart = m_currentGrabbedPart;
-                    m_despawnTimer = 0;
-
                     m_currentGrabbedPart = null;
-                    m_spawnNewPart = true;
                 }
             }
         }
         else
         {
-            for (int i = 0; i < m_prevHits.Count; i++)
-            {
-                m_prevHits[i].GetComponent<Renderer>().material.SetColor("_Color", Color.white);
-            }
+            //for (int i = 0; i < m_prevHits.Count; i++)
+            //{
+            //    m_prevHits[i].GetComponent<Renderer>().material.SetColor("_Color", Color.white);
+            //}
 
-            m_prevHits.Clear();
+            //m_prevHits.Clear();
 
             Vector3 handPos = hand.transform.position;
 
             var hits = Physics.OverlapSphere(handPos, grabRadius, grabbableLayers);
-            m_prevHits.AddRange(hits);
+            //m_prevHits.AddRange(hits);
 
             if (hits.Length > 0)
             {
@@ -86,18 +69,18 @@ public class PartsGrabber : MonoBehaviour
 
                 if (closestPart != null)
                 {
-                    if (hand.GetFingerIsPinching(OVRHand.HandFinger.Index))
+                    if (inPinch)
                     {
                         m_currentGrabbedPart = closestPart;
                         m_grabOffset = closestPart.transform.position - hand.transform.position;
                         m_currentGrabbedPart.transform.parent = hand.transform;
-                        closestPart.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
+                        //closestPart.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
                         closestPart.StartGrab();
 
                     }
                     else
                     {
-                        closestPart.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+                        //closestPart.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
                     }
                 }
             }

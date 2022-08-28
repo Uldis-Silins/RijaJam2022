@@ -39,11 +39,13 @@ public class Computer : MonoBehaviour
         Interactable = true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if(Interactable && other.gameObject.layer == m_partLayer)
         {
             Part part = other.GetComponent<Part>();
+
+            if (part.InGrab) return;
 
             int slotIndex = -1;
 

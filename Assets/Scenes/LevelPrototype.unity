@@ -452,7 +452,7 @@ MonoBehaviour:
   partPrefabs:
   - {fileID: 2383157086259008176, guid: eaaeca5ad44d741d69569160da68cc2f, type: 3}
   - {fileID: 4365349989012712649, guid: d30f88d2273de4e43b0c498df04ee678, type: 3}
-  m_spawnPoint: {fileID: 1499374458}
+  m_spawnPoint: {fileID: 1607489455}
   m_spawnOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &647231835
 Transform:
@@ -685,7 +685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470057209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.489, y: 1.128, z: -0.091}
+  m_LocalPosition: {x: 1.489, y: 1.845, z: -0.091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -784,6 +784,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1964762798}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1607489454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1607489455}
+  m_Layer: 0
+  m_Name: TempSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1607489455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607489454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.356, y: 1.793, z: -4.521}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1607489456 stripped
 GameObject:
@@ -938,7 +969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a193ba924680542308bb5e011c87d211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  factories: []
+  factories:
+  - {fileID: 647231834}
+  - {fileID: 1958475670}
 --- !u!4 &1716187045
 Transform:
   m_ObjectHideFlags: 0
@@ -1026,7 +1059,7 @@ MonoBehaviour:
   partPrefabs:
   - {fileID: 8253439415067324998, guid: 19b3ffe458302457bbf9a2295d96cc6b, type: 3}
   - {fileID: 902040785060352072, guid: 24082793db36a40e4976e40dc54b1fbe, type: 3}
-  m_spawnPoint: {fileID: 1499374458}
+  m_spawnPoint: {fileID: 1607489455}
   m_spawnOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &1958475671
 Transform:
@@ -1075,8 +1108,8 @@ MonoBehaviour:
   moveFromPosition: {fileID: 1581208697}
   assemblyPoint: {fileID: 1582727255}
   moveToPosition: {fileID: 1470057210}
-  moveInTime: 1
-  moveOutTime: 0.5
+  moveInTime: 1.2
+  moveOutTime: 0.75
   computerPrefabs:
   - {fileID: 535732023691199382, guid: 692d920b2d8504207ab4283f7a871f8a, type: 3}
 --- !u!4 &1964762798
@@ -1095,7 +1128,7 @@ Transform:
   - {fileID: 1582727255}
   - {fileID: 1470057210}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1973174792 stripped
 GameObject:
