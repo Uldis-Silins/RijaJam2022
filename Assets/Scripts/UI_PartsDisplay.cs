@@ -34,6 +34,9 @@ public class UI_PartsDisplay : MonoBehaviour
         {
             m_wrongTimer -= Time.deltaTime;
 
+            Color c = Color.Lerp(new Color(1.0f, 0.0f, 0.0f, 0.0f), new Color(1.0f, 0.0f, 0.0f, 1.0f), Mathf.PingPong(Time.time, 1.0f));
+            wrongPartImage.color = c;
+
             if(m_wrongTimer < 0)
             {
                 wrongPartImage.color = new Color(1.0f, 0.0f, 0.0f, 0.0f);
@@ -58,8 +61,42 @@ public class UI_PartsDisplay : MonoBehaviour
         m_spawnedIcons.Add(instance);
     }
 
+    public void Remove(Part.PartType type)
+    {
+        Image img = null;
+        Sprite spr = null;
+
+        for (int i = 0; i < sprites.Length; i++)
+        {
+            if(sprites[i].type == type)
+            {
+                spr = sprites[i].sprite;
+                break;
+            }
+        }
+
+        if (spr != null)
+        {
+            for (int i = 0; i < m_spawnedIcons.Count; i++)
+            {
+                if (m_spawnedIcons[i].sprite == spr)
+                {
+                    img = m_spawnedIcons[i];
+                }
+            }
+        }
+
+        if(img != null)
+        {
+            m_spawnedIcons.Remove(img);
+            Destroy(img.gameObject);
+        }
+    }
+
     public void ClearAll()
     {
+        if (m_spawnedIcons.Count == 0) return;
+
         for (int i = m_spawnedIcons.Count - 1; i > 0; i--)
         {
             Destroy(m_spawnedIcons[i].gameObject);
@@ -78,6 +115,7 @@ public class UI_PartsDisplay : MonoBehaviour
             }
         }
 
+        wrongPartImage.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
         m_isShowingWrong = true;
         m_wrongTimer = 5f;
     }

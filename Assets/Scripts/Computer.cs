@@ -28,6 +28,7 @@ public class Computer : MonoBehaviour
 
     private int m_partLayer;
 
+    public ComputerSpawner Owner { get; set; }
     public bool Interactable { get; set; }
     public bool IsAssembled { get; private set; }
 
@@ -57,6 +58,7 @@ public class Computer : MonoBehaviour
             {
                 part.Owner.Despawn(part);
                 m_emptySlots.RemoveAt(slotIndex);
+                Owner.uiPartsDisplay.Remove(part.type);
 
                 if(soundSource)
                 {
@@ -68,6 +70,7 @@ public class Computer : MonoBehaviour
             {
                 part.Owner.Despawn(part);
                 part.Owner.Spawn();
+                Owner.uiPartsDisplay.ShowWrongPart(part.type);
 
                 if(soundSource)
                 {

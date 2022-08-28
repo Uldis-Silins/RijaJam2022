@@ -83,6 +83,7 @@ public class ComputerSpawner : MonoBehaviour
     public void Spawn()
     {
         m_currentComputer = Instantiate<Computer>(computerPrefabs[Random.Range(0, computerPrefabs.Length)], moveFromPosition.position, Quaternion.identity);
+        m_currentComputer.Owner = this;
 
         uiPartsDisplay.ClearAll();
 
