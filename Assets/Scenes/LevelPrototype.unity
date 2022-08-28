@@ -1988,6 +1988,20 @@ MonoBehaviour:
   moveOutTime: 0.75
   computerPrefabs:
   - {fileID: 535732023691199382, guid: 692d920b2d8504207ab4283f7a871f8a, type: 3}
+  - {fileID: 535732023691199382, guid: cfc4442ab5d8d45b1b686e7ffbd6624b, type: 3}
+  - {fileID: 535732023691199382, guid: 251bb1bdcaff942f387f33ae36f3e054, type: 3}
+  - {fileID: 535732023691199382, guid: 9e747cc1b479542bc90649085c35defa, type: 3}
+  - {fileID: 535732023691199382, guid: e69c6f9a8ac424f6db492dd249a5713a, type: 3}
+  - {fileID: 535732023691199382, guid: e2bcd29e581534bf6a19dbba54509eaa, type: 3}
+  - {fileID: 535732023691199382, guid: c0981090abbeb4afda046140626241be, type: 3}
+  - {fileID: 535732023691199382, guid: c00a03ae97c2d4f6780d5745b8276397, type: 3}
+  - {fileID: 535732023691199382, guid: fd788b48863e64f70b00562fff960328, type: 3}
+  - {fileID: 535732023691199382, guid: 6dc278cde97a34cb3860107a7d888fa9, type: 3}
+  - {fileID: 535732023691199382, guid: d622c2f63509d4ae9a79dac9c67ee0b7, type: 3}
+  - {fileID: 535732023691199382, guid: bf0dd1b5e93694581975590425e2201d, type: 3}
+  - {fileID: 535732023691199382, guid: 267a1116dea59455da9f67df2c897de5, type: 3}
+  - {fileID: 535732023691199382, guid: db0d17b2078d14a3eb33619f3e176b17, type: 3}
+  - {fileID: 535732023691199382, guid: e22ece72f98234856a548cc3a4b5ba0a, type: 3}
 --- !u!4 &1964762798
 Transform:
   m_ObjectHideFlags: 0
