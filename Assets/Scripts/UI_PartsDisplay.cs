@@ -41,6 +41,7 @@ public class UI_PartsDisplay : MonoBehaviour
             {
                 wrongPartImage.color = new Color(1.0f, 0.0f, 0.0f, 0.0f);
                 m_isShowingWrong = false;
+                partIconContainer.gameObject.SetActive(true);
             }
         }
     }
@@ -117,6 +118,7 @@ public class UI_PartsDisplay : MonoBehaviour
 
         wrongPartImage.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
         m_isShowingWrong = true;
+        partIconContainer.gameObject.SetActive(false);
         m_wrongTimer = 5f;
     }
 }
