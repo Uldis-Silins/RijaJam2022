@@ -56,8 +56,8 @@ public class PushButton : MonoBehaviour
 
         if (audioSource)
         {
-            audioSource.clip = partSpawner.CanSpawn ? spawnClips[Random.Range(0, spawnClips.Length)] : cannotSpawnClips[Random.Range(0, cannotSpawnClips.Length)];
-            audioSource.Play();
+            //audioSource.clip = partSpawner.CanSpawn ? spawnClips[Random.Range(0, spawnClips.Length)] : cannotSpawnClips[Random.Range(0, cannotSpawnClips.Length)];
+            //audioSource.Play();
         }
 
         m_inSpawn = true;
