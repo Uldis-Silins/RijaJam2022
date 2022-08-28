@@ -23,6 +23,9 @@ public class UI_PartsDisplay : MonoBehaviour
     private float m_wrongTimer;
     private bool m_isShowingWrong;
 
+    private readonly Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.0f);
+    private readonly Color opaqueRed = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+
     private void Awake()
     {
         m_spawnedIcons = new List<Image>();
@@ -34,14 +37,14 @@ public class UI_PartsDisplay : MonoBehaviour
         {
             m_wrongTimer -= Time.deltaTime;
 
-            Color c = Color.Lerp(new Color(1.0f, 0.0f, 0.0f, 0.0f), new Color(1.0f, 0.0f, 0.0f, 1.0f), Mathf.PingPong(Time.time, 1.0f));
+            Color c = Color.Lerp(opaqueRed, transparentRed, Mathf.PingPong(Time.time, 1.0f));
             wrongPartImage.color = c;
 
             if(m_wrongTimer < 0)
             {
-                wrongPartImage.color = new Color(1.0f, 0.0f, 0.0f, 0.0f);
+                wrongPartImage.color = transparentRed;
                 m_isShowingWrong = false;
-                partIconContainer.gameObject.SetActive(true);
+                //partIconContainer.gameObject.SetActive(true);
             }
         }
     }
@@ -107,6 +110,8 @@ public class UI_PartsDisplay : MonoBehaviour
 
     public void ShowWrongPart(Part.PartType type)
     {
+        if (m_isShowingWrong) return;
+
         for (int i = 0; i < sprites.Length; i++)
         {
             if (sprites[i].type == type)
@@ -116,9 +121,9 @@ public class UI_PartsDisplay : MonoBehaviour
             }
         }
 
-        wrongPartImage.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+        wrongPartImage.color = opaqueRed;
         m_isShowingWrong = true;
-        partIconContainer.gameObject.SetActive(false);
+        //partIconContainer.gameObject.SetActive(false);
         m_wrongTimer = 5f;
     }
 }

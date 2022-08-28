@@ -68,9 +68,9 @@ public class Computer : MonoBehaviour
             }
             else
             {
+                Owner.uiPartsDisplay.ShowWrongPart(part.type);
                 part.Owner.Despawn(part);
                 part.Owner.Spawn();
-                Owner.uiPartsDisplay.ShowWrongPart(part.type);
 
                 if(soundSource)
                 {

@@ -156,7 +156,7 @@ MonoBehaviour:
   - {fileID: 902040785060352072, guid: fccd4ed0c5488410ea5fd43752f2df4c, type: 3}
   - {fileID: 902040785060352072, guid: 1cfa2a6bc5d184a90b469bce0090cf9a, type: 3}
   - {fileID: 902040785060352072, guid: 2ba0786189e1948b8a87e20bd62e79fb, type: 3}
-  m_spawnPoint: {fileID: 1607489455}
+  m_spawnPoint: {fileID: 1499374458}
   m_spawnOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &310708778
 Transform:
@@ -627,7 +627,7 @@ MonoBehaviour:
   - {fileID: 2383157086259008176, guid: 99982f932952742d28b2079939e440b6, type: 3}
   - {fileID: 2383157086259008176, guid: e75f779b5347341bbbc32545d6672051, type: 3}
   - {fileID: 2383157086259008176, guid: 0738d3b5d62d143ad97c1d1f6636efbc, type: 3}
-  m_spawnPoint: {fileID: 1607489455}
+  m_spawnPoint: {fileID: 1499374458}
   m_spawnOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &647231835
 Transform:
@@ -853,7 +853,7 @@ MonoBehaviour:
   - {fileID: 902040785060352072, guid: 6381f2fbc85574b37a7c3ce3bc9b46ff, type: 3}
   - {fileID: 902040785060352072, guid: 930b97a86f53741d894b3216d73108f2, type: 3}
   - {fileID: 902040785060352072, guid: 27b4accbe1f4643a38c19e44b6140cd9, type: 3}
-  m_spawnPoint: {fileID: 1607489455}
+  m_spawnPoint: {fileID: 1499374458}
   m_spawnOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &944078881
 Transform:
@@ -1081,7 +1081,7 @@ MonoBehaviour:
   - {fileID: 902040785060352072, guid: 19c70fa81ae2e4773a22ec2aa4f236f6, type: 3}
   - {fileID: 902040785060352072, guid: 2497602d67f5543c2b7dd3c76ac590dd, type: 3}
   - {fileID: 902040785060352072, guid: 099a5f4ab6be64acd8dfd97e9e046bfc, type: 3}
-  m_spawnPoint: {fileID: 1607489455}
+  m_spawnPoint: {fileID: 1499374458}
   m_spawnOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &1153909807
 Transform:
@@ -2312,7 +2312,7 @@ MonoBehaviour:
   - {fileID: 902040785060352072, guid: 8d7c2afad5111480d8b964b4d37ca0ff, type: 3}
   - {fileID: 902040785060352072, guid: dd1b6346953104ae4ac1619367630636, type: 3}
   - {fileID: 902040785060352072, guid: 927dcb6d630564103bbdcf2a066893df, type: 3}
-  m_spawnPoint: {fileID: 1607489455}
+  m_spawnPoint: {fileID: 1499374458}
   m_spawnOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &1958475671
 Transform:
