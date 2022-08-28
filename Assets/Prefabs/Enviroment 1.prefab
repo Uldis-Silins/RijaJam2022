@@ -134,6 +134,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 174394475496850968}
     m_Modifications:
+    - target: {fileID: 2971304748803699492, guid: a5c9f894b4b2c4c9eb921875e15322cd, type: 3}
+      propertyPath: m_Materials.Array.data[10]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 3619994274983023345, guid: a5c9f894b4b2c4c9eb921875e15322cd, type: 3}
       propertyPath: m_Name
       value: Room

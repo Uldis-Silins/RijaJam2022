@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6860564362956757401}
   - component: {fileID: 6943639536127009368}
   - component: {fileID: 902040785060352072}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GPU1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,9 +85,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6249319345611901381}
     m_Modifications:
+    - target: {fileID: 6665357831142920875, guid: 22c1d842c4893c94d8bd75dfe23b722b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8350091119134459700, guid: 22c1d842c4893c94d8bd75dfe23b722b, type: 3}
       propertyPath: m_Name
       value: graphics_card_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350091119134459700, guid: 22c1d842c4893c94d8bd75dfe23b722b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8694950104200060302, guid: 22c1d842c4893c94d8bd75dfe23b722b, type: 3}
       propertyPath: m_RootOrder

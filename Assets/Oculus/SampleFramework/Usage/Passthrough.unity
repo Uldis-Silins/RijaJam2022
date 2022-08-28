@@ -693,6 +693,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23786289319021016, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 114043904411177872, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
       propertyPath: joyPadClickButton
       value: 2105345
@@ -1972,6 +1976,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9666100097800571, guid: d4e3024a78cdcf14a9678e1afa4eede8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: 23293922492018622, guid: d4e3024a78cdcf14a9678e1afa4eede8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 108960374990514434, guid: d4e3024a78cdcf14a9678e1afa4eede8, type: 3}
       propertyPath: m_SpotAngle
       value: 40
@@ -1980,6 +1992,10 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 496008867125291892, guid: d4e3024a78cdcf14a9678e1afa4eede8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4e3024a78cdcf14a9678e1afa4eede8, type: 3}
 --- !u!1 &1828988756 stripped
