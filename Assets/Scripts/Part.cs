@@ -5,7 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(Collider), typeof(Rigidbody))]
 public class Part : MonoBehaviour
 {
-    // TODO: Create part data and assign here
+    public enum PartType { None, CPU, GPU, Memory, HDD, PSU }
+
+    public PartType type;
+    public int value = -1;
+
     private Rigidbody m_rigidbody;
 
     private Vector3 m_prevPosition;
