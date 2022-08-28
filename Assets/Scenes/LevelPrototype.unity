@@ -529,8 +529,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partPrefabs:
+  - {fileID: 2383157086259008176, guid: 38d969ece9b92437587d538543edc86e, type: 3}
   - {fileID: 2383157086259008176, guid: eaaeca5ad44d741d69569160da68cc2f, type: 3}
   - {fileID: 4365349989012712649, guid: d30f88d2273de4e43b0c498df04ee678, type: 3}
+  - {fileID: 4365349989012712649, guid: 5297ad76e500a43598ca7e1b78986d79, type: 3}
+  - {fileID: 4365349989012712649, guid: db7a99f4fa55c4967b2eeb535c01ba4f, type: 3}
+  - {fileID: 2383157086259008176, guid: 389a7094160a047008ff8e15d88a6008, type: 3}
+  - {fileID: 2383157086259008176, guid: c4301308a6e8f44d3ad7e360d7ac70ff, type: 3}
+  - {fileID: 2383157086259008176, guid: fce3bfc439f72456b8b6407af123ee9d, type: 3}
+  - {fileID: 2383157086259008176, guid: 99982f932952742d28b2079939e440b6, type: 3}
+  - {fileID: 2383157086259008176, guid: e75f779b5347341bbbc32545d6672051, type: 3}
+  - {fileID: 2383157086259008176, guid: 0738d3b5d62d143ad97c1d1f6636efbc, type: 3}
   m_spawnPoint: {fileID: 1607489455}
   m_spawnOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &647231835
@@ -1111,6 +1120,16 @@ MonoBehaviour:
   partPrefabs:
   - {fileID: 8253439415067324998, guid: 19b3ffe458302457bbf9a2295d96cc6b, type: 3}
   - {fileID: 902040785060352072, guid: 24082793db36a40e4976e40dc54b1fbe, type: 3}
+  - {fileID: 902040785060352072, guid: 17ab53eefd2b144a2bd39065286ec6fb, type: 3}
+  - {fileID: 902040785060352072, guid: 7941d36e82d254182a063764a36b38c6, type: 3}
+  - {fileID: 902040785060352072, guid: 717e9eed242ab409f91732b5762bbabe, type: 3}
+  - {fileID: 902040785060352072, guid: 2ede64f6c6cae421eaff323ad19be409, type: 3}
+  - {fileID: 902040785060352072, guid: 1d3f3ed272e5147759bd369df2c05687, type: 3}
+  - {fileID: 902040785060352072, guid: fe282a3afaee34010a4bcbe97198ef36, type: 3}
+  - {fileID: 902040785060352072, guid: 3acb0e24e2a8a4a78abcbe23c13c2f33, type: 3}
+  - {fileID: 902040785060352072, guid: 8d7c2afad5111480d8b964b4d37ca0ff, type: 3}
+  - {fileID: 902040785060352072, guid: dd1b6346953104ae4ac1619367630636, type: 3}
+  - {fileID: 902040785060352072, guid: 927dcb6d630564103bbdcf2a066893df, type: 3}
   m_spawnPoint: {fileID: 1607489455}
   m_spawnOffset: {x: 0, y: 1, z: 0}
 --- !u!4 &1958475671
