@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8961180047762844326}
   - component: {fileID: 3216637407189329220}
   - component: {fileID: 8253439415067324998}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GPU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,9 +85,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7662544383330830994}
     m_Modifications:
+    - target: {fileID: 1073754464938380902, guid: d6d008d8166c3664eba1ec9e4e56c203, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2416143803378785273, guid: d6d008d8166c3664eba1ec9e4e56c203, type: 3}
       propertyPath: m_Name
       value: graphics_card
+      objectReference: {fileID: 0}
+    - target: {fileID: 2416143803378785273, guid: d6d008d8166c3664eba1ec9e4e56c203, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3083854484172374339, guid: d6d008d8166c3664eba1ec9e4e56c203, type: 3}
       propertyPath: m_RootOrder
@@ -132,6 +140,10 @@ PrefabInstance:
     - target: {fileID: 3083854484172374339, guid: d6d008d8166c3664eba1ec9e4e56c203, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717810849189689870, guid: d6d008d8166c3664eba1ec9e4e56c203, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d008d8166c3664eba1ec9e4e56c203, type: 3}

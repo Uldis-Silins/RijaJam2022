@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3290879083897372491}
   - component: {fileID: 7176692254044602504}
   - component: {fileID: 2383157086259008176}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CPU1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,6 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ec4e3d32b2f47e5923ae92757efa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  value: -1
 --- !u!1001 &4156657647552879649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +132,10 @@ PrefabInstance:
     - target: {fileID: 6550556491647638984, guid: 3f82c100bc21deb4e8d0bc825076b4b9, type: 3}
       propertyPath: m_Name
       value: processor_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550556491647638984, guid: 3f82c100bc21deb4e8d0bc825076b4b9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f82c100bc21deb4e8d0bc825076b4b9, type: 3}
