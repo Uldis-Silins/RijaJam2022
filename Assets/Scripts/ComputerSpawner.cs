@@ -10,6 +10,8 @@ public class ComputerSpawner : MonoBehaviour
     public float moveInTime, moveOutTime;
     public Computer[] computerPrefabs;
 
+    public UI_PartsDisplay uiPartsDisplay;
+
     private CurrentStateType m_state;
     private Computer m_currentComputer;
     private bool m_inAssembly;
@@ -81,6 +83,14 @@ public class ComputerSpawner : MonoBehaviour
     public void Spawn()
     {
         m_currentComputer = Instantiate<Computer>(computerPrefabs[Random.Range(0, computerPrefabs.Length)], moveFromPosition.position, Quaternion.identity);
+
+        uiPartsDisplay.ClearAll();
+
+        for (int i = 0; i < m_currentComputer.slots.Length; i++)
+        {
+            uiPartsDisplay.Spawn(m_currentComputer.slots[i].type);
+        }
+
         m_moveTimer = 0f;
         m_state = CurrentStateType.MoveIn;
     }
