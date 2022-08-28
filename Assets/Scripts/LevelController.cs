@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    public PartsFactory[] factories;
+    public int currentScore = 0;
 
     private void Start()
     {
-        factories[0].Spawn();
+        
     }
 }

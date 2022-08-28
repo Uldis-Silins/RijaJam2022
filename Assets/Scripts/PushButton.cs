@@ -7,7 +7,8 @@ public class PushButton : MonoBehaviour
     public Animator anim;
     public AudioSource audioSource;
 
-    public AudioClip[] clickClips;
+    public AudioClip[] spawnClips;
+    public AudioClip[] cannotSpawnClips;
 
     public float resetDelay = 2.0f;
     public float spawnDelay = 0.35f;
@@ -52,11 +53,12 @@ public class PushButton : MonoBehaviour
         if (m_inSpawn || m_inReset) return;
 
         anim.SetTrigger(m_pushAnimHash);
-        //anim.ResetTrigger(m_pushAnimHash);
-        //audioSource.clip = clickClips[Random.Range(0, clickClips.Length)];
-        //audioSource.Play();
 
-        partSpawner.Despawn();
+        if (audioSource)
+        {
+            audioSource.clip = partSpawner.CanSpawn ? spawnClips[Random.Range(0, spawnClips.Length)] : cannotSpawnClips[Random.Range(0, cannotSpawnClips.Length)];
+            audioSource.Play();
+        }
 
         m_inSpawn = true;
         m_spawnTimer = spawnDelay;

@@ -5,6 +5,9 @@ using OVR;
 
 public class PartsGrabber : MonoBehaviour
 {
+    public AudioSource soundSource;
+    public AudioClip[] grabPartClips;
+
     public LevelController levelController;
 
     [SerializeField] private OVRHand hand;
@@ -75,6 +78,13 @@ public class PartsGrabber : MonoBehaviour
                         m_grabOffset = closestPart.transform.position - hand.transform.position;
                         m_currentGrabbedPart.transform.parent = hand.transform;
                         //closestPart.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
+
+                        if (soundSource)
+                        {
+                            soundSource.clip = grabPartClips[Random.Range(0, grabPartClips.Length)];
+                            soundSource.Play();
+                        }
+
                         closestPart.StartGrab();
 
                     }

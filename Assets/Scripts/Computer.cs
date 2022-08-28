@@ -20,6 +20,10 @@ public class Computer : MonoBehaviour
 
     public int value = 100;
 
+    public AudioSource soundSource;
+    public AudioClip[] addPartClips;
+    public AudioClip[] wrongPartClips;
+
     private List<PartSlot> m_emptySlots;
 
     private int m_partLayer;
@@ -53,6 +57,20 @@ public class Computer : MonoBehaviour
             {
                 part.Owner.Despawn(part);
                 m_emptySlots.RemoveAt(slotIndex);
+
+                if(soundSource)
+                {
+                    soundSource.clip = addPartClips[Random.Range(0, addPartClips.Length)];
+                    soundSource.Play();
+                }
+            }
+            else
+            {
+                if(soundSource)
+                {
+                    soundSource.clip = wrongPartClips[Random.Range(0, wrongPartClips.Length)];
+                    soundSource.Play();
+                }
             }
 
             if(m_emptySlots.Count == 0)

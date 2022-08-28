@@ -12,6 +12,8 @@ public class PartsFactory : MonoBehaviour
 
     private List<Part> m_spawnedParts;
 
+    public bool CanSpawn { get { return m_spawnedParts.Count == 0; } }
+
     private void Awake()
     {
         m_spawnedParts = new List<Part>();
